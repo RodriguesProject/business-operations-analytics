@@ -9,7 +9,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "demandas_sinteticas.csv"
 OUTPUT_DIR = ROOT / "outputs"
-DATA_REFERENCIA = pd.Timestamp("2026-10-31")
+DATA_REFERENCIA = pd.Timestamp("2026-11-17")
 
 
 def carregar_dados() -> pd.DataFrame:
