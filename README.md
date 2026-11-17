@@ -8,7 +8,7 @@
 
 Este projeto demonstra como transformar registros operacionais em informação estruturada para apoiar decisões de gestão. A análise parte de uma base fictícia de demandas e percorre etapas de inspeção, tratamento, criação de indicadores, análise descritiva e visualização.
 
-O domínio jurídico é utilizado apenas como contexto de negócio. O foco técnico está em **Análise de Dados e Business Analysis**, não em QA Engineering.
+O domínio jurídico é utilizado apenas como contexto de negócio. O foco técnico está em **Análise de Dados e Business Analysis**, com foco em análise descritiva de operações.
 
 ## Perguntas de negócio
 
@@ -39,7 +39,7 @@ O domínio jurídico é utilizado apenas como contexto de negócio. O foco técn
 - **SQL / PostgreSQL:** consultas relacionais e agregações em nível introdutório.
 - **Git e GitHub:** versionamento e documentação do projeto.
 
-As tecnologias são apresentadas como conhecimentos em desenvolvimento, coerentes com a formação atual. Este projeto não pretende sugerir experiência profissional avançada em engenharia de dados, desenvolvimento de software ou QA.
+As tecnologias são apresentadas como conhecimentos em desenvolvimento, coerentes com a formação atual. Este projeto não pretende sugerir experiência profissional avançada em engenharia de dados, desenvolvimento de software .
 
 ## Estrutura
 
@@ -105,7 +105,7 @@ O script imprime os principais indicadores e cria os arquivos de resumo e gráfi
 - **Tempo médio de conclusão:** média de dias entre recebimento e encerramento, considerando apenas as concluídas.
 - **Demandas em atraso:** demandas em aberto cuja data-alvo é anterior à data de referência do estudo.
 
-A data de referência é fixa (**31/10/2026**) para permitir reprodução dos mesmos resultados. Os indicadores descrevem exclusivamente a base sintética.
+A data de referência é fixa (**17/11/2026**) para permitir reprodução dos mesmos resultados. Os indicadores descrevem exclusivamente a base sintética.
 
 ## Consultas SQL
 
