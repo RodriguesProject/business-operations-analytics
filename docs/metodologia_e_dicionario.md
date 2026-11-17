@@ -33,9 +33,9 @@ Estudo demonstrativo de análise descritiva de operações. A base foi criada ar
 
 - **Taxa de conclusão:** demandas com status concluida ÷ total de demandas × 100.
 - **Tempo médio de conclusão:** média da diferença entre data de conclusão e data de recebimento para demandas concluídas.
-- **Demanda em atraso:** registro ainda aberto com data_alvo anterior a 31/10/2026.
+- **Demanda em atraso:** registro ainda aberto com data_alvo anterior a 17/11/2026.
 - **Fluxo mensal:** quantidade recebida por mês e quantidade concluída por mês de encerramento.
 
 ## Limitações
 
-A data de referência (31/10/2026) é fixa para reprodutibilidade. A data-alvo é ilustrativa e não corresponde a prazo legal, contratual ou SLA real. A base é pequena, sintética e adequada apenas para demonstrar técnicas básicas de análise descritiva. Não sustenta inferências causais ou preditivas.
+A data de referência (17/11/2026) é fixa para reprodutibilidade. A data-alvo é ilustrativa e não corresponde a prazo legal, contratual ou SLA real. A base é pequena, sintética e adequada apenas para demonstrar técnicas básicas de análise descritiva. Não sustenta inferências causais ou preditivas.
