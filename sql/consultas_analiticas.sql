@@ -31,7 +31,7 @@ WHERE status = 'concluida'
 SELECT id_demanda, area, prioridade, equipe, data_alvo
 FROM demands
 WHERE status <> 'concluida'
-  AND data_alvo < DATE '2026-10-31'
+  AND data_alvo < DATE '2026-11-17'
 ORDER BY data_alvo;
 
 -- 6. Volume em aberto por área
