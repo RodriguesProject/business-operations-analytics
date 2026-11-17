@@ -8,7 +8,7 @@
 
 Este projeto demonstra como transformar registros operacionais em informação estruturada para apoiar decisões de gestão. A análise parte de uma base fictícia de demandas e percorre etapas de inspeção, tratamento, criação de indicadores, análise descritiva e visualização.
 
-O domínio jurídico é utilizado apenas como contexto de negócio. O foco técnico está em **Análise de Dados e Business Analysis**, com foco em análise descritiva de operações.
+O domínio jurídico é utilizado apenas como contexto de negócio. O projeto concentra-se em **Análise de Dados e Business Analysis**, com análise descritiva de indicadores operacionais.
 
 ## Perguntas de negócio
 
@@ -106,6 +106,21 @@ O script imprime os principais indicadores e cria os arquivos de resumo e gráfi
 - **Demandas em atraso:** demandas em aberto cuja data-alvo é anterior à data de referência do estudo.
 
 A data de referência é fixa (**17/11/2026**) para permitir reprodução dos mesmos resultados. Os indicadores descrevem exclusivamente a base sintética.
+
+## Resultado de referência da base sintética
+
+Na execução sobre os 30 registros fictícios, considerando a data de referência de 17/11/2026, os indicadores calculados são:
+
+| Indicador | Resultado |
+|---|---:|
+| Demandas registradas | 30 |
+| Demandas concluídas | 15 |
+| Demandas em aberto | 15 |
+| Taxa de conclusão | 50,0% |
+| Tempo médio de conclusão | 23 dias |
+| Demandas em aberto com data-alvo vencida | 14 |
+
+Esses números servem para demonstrar o cálculo e a comunicação dos indicadores no conjunto sintético; não representam produtividade, desempenho ou prazos de uma operação real.
 
 ## Consultas SQL
 
