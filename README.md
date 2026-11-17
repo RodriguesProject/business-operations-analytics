@@ -1,191 +1,131 @@
-# Judicial Information System — QA Engineering Portfolio
+# Business Operations Analytics — Análise de Dados de Demandas e Processos
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![FastAPI](https://img.shields.io/badge/API-FastAPI-009688)
-![Pytest](https://img.shields.io/badge/Tests-Pytest-0A9EDC)
-![Status](https://img.shields.io/badge/QA%20Portfolio-Ready-brightgreen)
+**Projeto demonstrativo de portfólio | Thiago Rodrigues**
 
-**Candidate:** Thiago Rodrigues  
-**Repository:** RodriguesProject  
-**Portfolio project:** Judicial Information System — Quality Assurance
+> Estudo autoral de análise de dados aplicada à gestão de demandas e processos. O contexto é inspirado em operações administrativas e jurídicas, mas todos os registros, equipes, datas e valores desta base são inteiramente sintéticos. O projeto não representa clientes, processos judiciais reais, empresas ou resultados profissionais.
 
-> **Portfolio / academic project:** this repository is a fictional simulation created to demonstrate hands-on QA capabilities. It is not professional experience for UNDP, CNJ, any court, government institution, or real client.
+## Visão geral
 
-## 2-minute recruiter overview
+Este projeto demonstra como transformar registros operacionais em informação estruturada para apoiar decisões de gestão. A análise parte de uma base fictícia de demandas e percorre etapas de inspeção, tratamento, criação de indicadores, análise descritiva e visualização.
 
-This project demonstrates a complete, traceable QA workflow for a fictional judicial information system, from requirements and risk analysis to manual test design, API testing, security/access-control testing, regression, end-to-end validation, automated tests and CI.
+O domínio jurídico é utilizado apenas como contexto de negócio. O foco técnico está em **Análise de Dados e Business Analysis**, não em QA Engineering.
 
-| Capability | Evidence | What to look at |
-|---|---|---|
-| Requirements analysis | Requirements + acceptance criteria | `docs/01_requirements.md` |
-| Test planning | Test plan / strategy | `docs/02_test_plan.md`, `docs/09_portfolio_test_strategy.md` |
-| Test design | Scenarios + test cases | `docs/03_test_scenarios.md`, `test-data/test-cases.csv` |
-| Functional QA | Positive/negative validation | `tests/test_functional.py` |
-| Integration QA | API/workflow integration | `tests/test_integration.py` |
-| E2E testing | Judicial case workflow | `tests/test_e2e.py` |
-| Security QA | Authorization / restricted actions | `tests/test_security.py`, `docs/06_risk_matrix.md` |
-| Regression | Repeatable regression suite | `tests/test_regression.py`, `docs/07_regression_strategy.md` |
-| Automation | Pytest suite | `tests/` |
-| API | FastAPI application | `app/main.py` |
-| CI/CD | Automated GitHub workflow | `.github/workflows/qa.yml` |
-| Test reporting | Execution evidence + summary | `reports/` |
-| Performance check | Lightweight local load check | `scripts/performance_check.py` |
+## Perguntas de negócio
 
-## Current validation result
+- Qual é o volume de demandas por área e por período?
+- Como as demandas se distribuem por status, etapa e prioridade?
+- Qual é a taxa de conclusão no conjunto analisado?
+- Qual é o tempo médio de conclusão das demandas encerradas?
+- Quantas demandas em aberto ultrapassaram a data-alvo definida na base?
+- Quais recortes merecem atenção gerencial?
 
-**Latest local run:**
+## Competências demonstradas no estudo
+
+| Etapa | Aplicação no projeto |
+|---|---|
+| Entendimento do negócio | Definição das perguntas gerenciais e dos indicadores |
+| Preparação dos dados | Leitura, tipagem, validação e tratamento de datas |
+| Análise exploratória | Distribuição por área, status, prioridade e mês |
+| Indicadores (KPIs) | Volume, taxa de conclusão, tempo médio e demandas vencidas |
+| Visualização | Gráficos para leitura de volume e fluxo mensal |
+| SQL | Consultas agregadas para responder às perguntas de negócio |
+| Comunicação analítica | Síntese dos resultados e registro das limitações |
+
+## Tecnologias e nível de desenvolvimento
+
+- **Python:** fundamentos e aplicação em scripts de análise.
+- **Pandas:** leitura, transformação, agrupamento e sumarização de dados em desenvolvimento.
+- **Matplotlib:** visualizações básicas.
+- **SQL / PostgreSQL:** consultas relacionais e agregações em nível introdutório.
+- **Git e GitHub:** versionamento e documentação do projeto.
+
+As tecnologias são apresentadas como conhecimentos em desenvolvimento, coerentes com a formação atual. Este projeto não pretende sugerir experiência profissional avançada em engenharia de dados, desenvolvimento de software ou QA.
+
+## Estrutura
 
 ```text
-10 tests passed
-0 tests failed
-100% pass rate
+business-operations-analytics/
+├── README.md
+├── requirements.txt
+├── data/
+│   └── demandas_sinteticas.csv
+├── src/
+│   └── analise_operacional.py
+├── sql/
+│   └── consultas_analiticas.sql
+├── docs/
+│   └── metodologia_e_dicionario.md
+└── outputs/                 # gerado ao executar o script
+    ├── resumo_indicadores.json
+    ├── demandas_por_area.csv
+    ├── entrada_vs_conclusao_mensal.csv
+    └── *.png
 ```
 
-Lightweight local performance check:
+## Como executar
 
-```text
-100 requests
-Average: 0.845 ms
-Minimum: 0.633 ms
-Maximum: 1.439 ms
-```
-
-These figures are local portfolio evidence only; they are not production benchmarks.
-
-## Technical stack
-
-- Python
-- FastAPI
-- Pytest
-- HTTPX
-- REST API concepts
-- GitHub Actions
-- Markdown / CSV test artifacts
-
-## QA approach
-
-The project uses a risk-based and traceable approach:
-
-1. Define requirements and acceptance criteria.
-2. Identify quality and security risks.
-3. Design scenarios and test cases.
-4. Prepare representative test data.
-5. Validate functional, integration, E2E, regression and authorization behavior.
-6. Automate repeatable checks with Pytest.
-7. Execute the suite through GitHub Actions.
-8. Record evidence, defects and residual risks.
-9. Produce a test summary and release recommendation.
-
-## Quick start
+Requer Python 3.10 ou superior.
 
 ```bash
 python -m venv .venv
 ```
 
-Windows:
+No Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-Linux/macOS:
+No Linux/macOS:
 
 ```bash
 source .venv/bin/activate
 ```
 
-Install dependencies:
+Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run automated tests:
+Execute a análise a partir da raiz do repositório:
 
 ```bash
-pytest -q
+python src/analise_operacional.py
 ```
 
-Run the API locally:
+O script imprime os principais indicadores e cria os arquivos de resumo e gráficos na pasta `outputs/`.
 
-```bash
-python -m uvicorn app.main:app --reload
-```
+## Indicadores utilizados
 
-Then open:
+- **Demandas registradas:** quantidade de identificadores únicos.
+- **Demandas concluídas:** registros com status `concluida`.
+- **Demandas em aberto:** registros ainda não concluídos.
+- **Taxa de conclusão:** demandas concluídas divididas pelo total.
+- **Tempo médio de conclusão:** média de dias entre recebimento e encerramento, considerando apenas as concluídas.
+- **Demandas em atraso:** demandas em aberto cuja data-alvo é anterior à data de referência do estudo.
 
-`http://127.0.0.1:8000/docs`
+A data de referência é fixa (**31/10/2026**) para permitir reprodução dos mesmos resultados. Os indicadores descrevem exclusivamente a base sintética.
 
-Run the lightweight performance check:
+## Consultas SQL
 
-```bash
-python scripts/performance_check.py
-```
+O arquivo [sql/consultas_analiticas.sql](sql/consultas_analiticas.sql) contém exemplos de consultas para volume por área, status, evolução mensal, tempo médio de conclusão e demandas em atraso. O script Python não depende de um servidor PostgreSQL: as consultas são material de estudo para adaptação a uma tabela relacional.
 
-## Repository navigation
+## Limitações e integridade
 
-```text
-RodriguesProject/
-│
-├── README.md
-├── LICENSE
-├── SECURITY.md
-├── .gitignore
-├── requirements.txt
-├── pytest.ini
-│
-├── app/
-│   └── main.py
-│
-├── tests/
-│   ├── test_functional.py
-│   ├── test_integration.py
-│   ├── test_security.py
-│   ├── test_e2e.py
-│   └── test_regression.py
-│
-├── docs/
-│   ├── 01_requirements.md
-│   ├── 02_test_plan.md
-│   ├── 03_test_scenarios.md
-│   ├── 06_risk_matrix.md
-│   ├── 07_regression_strategy.md
-│   ├── 08_defect_report_template.md
-│   ├── 09_portfolio_test_strategy.md
-│   ├── 10_tdd_workflow.md
-│   ├── 11_github_profile.md
-│   └── 12_recruiter_walkthrough.md
-│
-├── test-data/
-│   ├── test-cases.csv
-│   └── test-data.csv
-│
-├── reports/
-├── scripts/
-└── .github/workflows/
-    └── qa.yml
-```
+- A base é pequena e artificial; não permite inferir desempenho real de uma organização.
+- A data de referência é fixa e foi escolhida para reprodutibilidade.
+- A data-alvo é um campo ilustrativo da base, não um prazo jurídico ou SLA validado.
+- Os resultados são descritivos, não preditivos.
+- Nenhum dado de cliente, processo judicial, parte, advogado ou instituição foi utilizado.
 
-## Integrity and scope
+## Sobre o autor
 
-No real judicial data, credentials, personal information, production infrastructure or UNDP/CNJ system components are used. The domain is fictional and exists only to demonstrate QA engineering practices.
+Profissional com formação em Administração e Direito e trajetória em gestão administrativa, operações, contratos, análise documental e gestão de processos. Atualmente desenvolve competências em Business Analysis e Análise de Dados por meio da Carreira Tech – Trilha Análise de Dados (SCTEC/SENAI).
 
-## Recruiter walkthrough
+- **LinkedIn:** https://www.linkedin.com/in/thiago-rodrigues-2112188b/
+- **GitHub:** https://github.com/RodriguesProject
+- **Localização:** Joinville, Santa Catarina, Brasil
 
-For a fast review, start with:
-
-1. This `README.md`.
-2. `docs/01_requirements.md` — requirements and acceptance criteria.
-3. `docs/02_test_plan.md` — test planning.
-4. `test-data/test-cases.csv` — concrete test design.
-5. `tests/` — executable automation.
-6. `docs/06_risk_matrix.md` — risk-based quality thinking.
-7. `reports/test-summary-report.md` — reporting and release view.
-8. `.github/workflows/qa.yml` — CI execution.
-
-## Why this domain was selected
-
-The fictional judicial context allows the portfolio to demonstrate quality concerns that matter in information systems: data integrity, traceability, controlled access, auditability, process correctness and risk management. It also reflects the candidate's professional domain knowledge without presenting the project as experience with a real institution.
-
-## CI/CD compatibility
-The workflow uses current Node.js 24-compatible official GitHub Actions versions for checkout and Python setup.
+---
+*Projeto educacional e demonstrativo. Os dados e resultados não representam uma operação real.*
